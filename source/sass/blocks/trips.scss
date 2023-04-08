@@ -1,0 +1,69 @@
+.trips {
+  min-height: 566px;
+
+  @include vp-1023 {
+    min-height: auto;
+  }
+}
+
+.trips__container {
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+
+  @include vp-1023 {
+    padding: 100px 0 83px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    padding: 65px 0 85px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 33px;
+  }
+}
+
+.trips__content {
+  max-width: 512px;
+  padding-top: 10px;
+  align-self: center;
+
+  @include vp-1023 {
+    align-self: start;
+    padding: 0;
+  }
+}
+
+.trips h2 {
+  margin: 0 0 23px 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+
+  @include vp-1023 {
+    margin-top: -6px;
+    margin-bottom: 17px;
+    max-width: 210px;
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  @include vp-767 {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+
+.trips p {
+  margin: 0 0 10px 0;
+}
+
+.trips img {
+  height: auto;
+  object-fit: contain;
+}

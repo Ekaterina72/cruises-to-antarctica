@@ -684,6 +684,10 @@ button,
 }
 
 .header-example {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 35px 0;
   z-index: 30;
   -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
@@ -691,13 +695,6 @@ button,
   -o-transition: transform 0.3s ease, background-color 0.3s ease;
   transition: transform 0.3s ease, background-color 0.3s ease;
   transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.header-example--sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
 .header-example.is-hidden {
@@ -728,6 +725,7 @@ button,
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  overflow-y: scroll;
 }
 
 .is-open .header-example__nav .header-example__item {
@@ -942,6 +940,47 @@ button,
 
 .navigation__link.focus-visible:focus {
   opacity: 0.7;
+}
+
+.trips {
+  min-height: 566px;
+}
+
+.trips__container {
+  padding: 120px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.trips__content {
+  max-width: 512px;
+  padding-top: 10px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.trips h2 {
+  margin: 0 0 23px 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+}
+
+.trips p {
+  margin: 0 0 10px 0;
+}
+
+.trips img {
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .footer {
@@ -1661,6 +1700,30 @@ button,
     font-size: 12px;
   }
 
+  .trips {
+    min-height: auto;
+  }
+
+  .trips__container {
+    padding: 100px 0 83px;
+    gap: 30px;
+  }
+
+  .trips__content {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    padding: 0;
+  }
+
+  .trips h2 {
+    margin-top: -6px;
+    margin-bottom: 17px;
+    max-width: 210px;
+    font-size: 26px;
+    line-height: 130%;
+  }
+
   .footer__container {
     -ms-grid-columns: 38px 1fr auto;
     grid-template-columns: 38px 1fr auto;
@@ -1842,6 +1905,21 @@ button,
   .navigation__link--footer {
     font-size: 12px;
     padding-left: 0;
+  }
+
+  .trips__container {
+    padding: 65px 0 85px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 33px;
+  }
+
+  .trips h2 {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 140%;
   }
 
   .footer__container {

@@ -1,4 +1,8 @@
 .header-example {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 35px 0;
   z-index: 30;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -9,13 +13,6 @@
 
   @include vp-767 {
     padding: 20px 0;
-  }
-
-  &--sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
   }
 
   &.is-hidden {
@@ -69,6 +66,7 @@
       pointer-events: all;
       visibility: visible;
       transform: translateX(0);
+      overflow-y: scroll;
 
       .header-example__item {
         opacity: 1;
