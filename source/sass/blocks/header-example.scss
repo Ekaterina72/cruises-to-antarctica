@@ -1,0 +1,239 @@
+.header-example {
+  padding: 35px 0;
+  z-index: 30;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  @include vp-1023 {
+    padding: 28px 0;
+  }
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  &__logo {
+    display: flex;
+
+    .is-open & {
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+
+    @include vp-767 {
+      background-color: $color-alice-blue;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      left: 36px;
+      opacity: 0;
+      margin: 0;
+      padding: 20px 30px 20px 15px;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      transition: all 0.3s ease;
+      right: 0;
+      transform: translateX(100%);
+      visibility: hidden;
+      z-index: 20;
+    }
+
+    .logo {
+      display: none;
+
+      @include vp-767 {
+        display: inline-flex;
+        margin-bottom: 35px;
+      }
+    }
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      transform: translateX(0);
+
+      .header-example__item {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    @include vp-767 {
+      width: 100%;
+      opacity: 0;
+      transition: all ease-out 0.15s;
+      transform: translateX(15px);
+    }
+
+    // &:not(:last-child) {
+    //   margin: 0 55px 0 0;
+
+    //   @include vp-767 {
+    //     margin: 0 0 36px 0;
+    //   }
+    // }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    color: $color-alice-blue;
+    transition: color 0.3s ease;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      color: $color-tangaroa;
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    @include active {
+      opacity: 0.5;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 18px;
+    justify-self: end;
+    align-items: start;
+    background-color: transparent;
+    border: none;
+    color: $color-alice-blue;
+    display: none;
+    padding: 0;
+    z-index: 25;
+    cursor: pointer;
+
+    @include vp-767 {
+      position: relative;
+      top: 2px;
+      margin-left: auto;
+      display: flex;
+      transition: all 0.3s ease;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include focus {
+      opacity: 0.8;
+    }
+
+    @include active {
+      opacity: 0.5;
+    }
+
+    .is-open {
+      .header-example__burger-open {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease 0s;
+      }
+
+      .header-example__burger-close {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity 0.3s ease 0.2s;
+      }
+    }
+  }
+
+  &__burger-open {
+    width: 24px;
+    height: 2px;
+    background-color: $color-alice-blue;
+    box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+    transition: opacity 0.3s ease 0.1s;
+
+
+    .is-open & {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+
+  &__burger-close {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: -2px;
+    cursor: pointer;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.3s ease 0.2s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background-color: $color-tangaroa;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.header-example_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

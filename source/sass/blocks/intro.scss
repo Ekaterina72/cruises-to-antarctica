@@ -1,0 +1,113 @@
+.intro {
+  min-height: 650px;
+  color: $color-alice-blue;
+  background-color: #003c75;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (min-width: ($vp-1024)) {
+    background-image: url("./../img/backgrounds/main-bg.jpg");
+
+    @supports (background-image: url("./../img/backgrounds/main-bg.webp")) {
+      background-image: url("./../img/backgrounds/main-bg.webp");
+    }
+
+    @include retina {
+      background-image: url("./../img/backgrounds/main-bg@2x.jpg");
+
+      @supports (background-image: url("./../img/backgrounds/main-bg@2x.webp")) {
+        background-image: url("./../img/backgrounds/main-bg@2x.webp");
+      }
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 638px;
+    background-image: url("./../img/backgrounds/main-bg-tablet.jpg");
+
+    @supports (background-image: url("./../img/backgrounds/main-bg-tablet.webp")) {
+      background-image: url("./../img/backgrounds/main-bg-tablet.webp");
+    }
+
+    @include retina {
+      background-image: url("./../img/backgrounds/main-bg-tablet@2x.jpg");
+
+      @supports (background-image: url("./../img/backgrounds/main-bg-tablet@2x.webp")) {
+        background-image: url("./../img/backgrounds/main-bg-tablet@2x.webp");
+      }
+    }
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    background-image: url("./../img/backgrounds/main-bg-mobile.jpg");
+
+    @supports (background-image: url("./../img/backgrounds/main-bg-mobile.webp")) {
+      background-image: url("./../img/backgrounds/main-bg-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("./../img/backgrounds/main-bg-mobile@2x.jpg");
+
+      @supports (background-image: url("./../img/backgrounds/main-bg-mobile@2x.webp")) {
+        background-image: url("./../img/backgrounds/main-bg-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.intro__container {
+  padding: 276px 95px 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @include vp-1023 {
+    padding-top: 274px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 176px;
+    padding-bottom: 150px;
+  }
+}
+
+.intro h1 {
+  margin: 0 0 20px 0;
+  font-size: 54px;
+  line-height: 100%;
+  font-weight: 700;
+
+  @include vp-1023 {
+    font-size: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 11px;
+    font-size: 36px;
+    line-height: 125%;
+  }
+}
+
+.intro p {
+  margin: 0 0 25px 0;
+  font-size: 20px;
+  line-height: 100%;
+
+  @include vp-1023 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    width: 200px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}

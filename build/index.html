@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Путешествия на круизном лайнере в Антарктиду">
   <title>Круизы в Антарктику </title>
-  <link rel="icon" href="favicon/favicon.ico">
-  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/icon-180.png">
+  <link rel="close" href="favicon/favcicon.ico">
+  <link rel="close" href="favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-close" href="favicon/icon-180.png">
   <link rel="manifest" href="favicon/manifest.webmanifest">
   <link rel="preload" href="fonts/montserratregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserratmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -20,53 +20,53 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="header header-example header-example--sticky" data-header="sticky" data-fix-block=""
+      data-hide-point="50">
+      <div class="container">
+        <div class="header-example_container">
+          <a class="logo header-example__logo" href="index.html">
+            <img src="img/svg/light-logo.svg" alt="логотип компании." width="70" height="38">
+          </a>
+          <nav class="header-example__nav">
+            <a class="logo" href="index.html">
+              <img src="img/svg/dark-logo.svg" alt="логотип компании." width="70" height="38">
+            </a>
+            <ul class="header-example__list navigation">
+              <li class="header-example__item">
+                <a class="header-example__link" href="#advantages">Преимущества</a>
+              </li>
+              <li class="header-example__item">
+                <a class="header-example__link" href="#">Направления</a>
+              </li>
+              <li class="header-example__item">
+                <a class="header-example__link" href="#closest-cruises">Ближайшие круизы</a>
+              </li>
+              <li class="header-example__item">
+                <a class="header-example__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню"
+            aria-pressed="false" data-burger="">
+            <span class="header-example__burger-open"></span>
+            <span class="header-example__burger-close"></span>
+          </button>
+        </div>
+      </div>
     </header>
     <main>
       <section class="intro">
         <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+          <div class="intro__container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
         </div>
       </section>
     </main>
     <footer>
       <div class="container"></div>
     </footer>
-  </div>
-
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>
