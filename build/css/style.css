@@ -668,6 +668,16 @@ button,
   opacity: 0.8;
 }
 
+.logo {
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.logo.focus-visible:focus {
+  opacity: 0.7;
+}
+
 .logo img {
   width: 70px;
   height: 38px;
@@ -732,23 +742,9 @@ button,
 }
 
 .header-example__link {
-  display: inline-block;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 100%;
-  color: #f9fbfd;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-}
-
-.header-example__link.focus-visible:focus {
-  opacity: 0.7;
-}
-
-.header-example__link.focus-visible:active {
-  opacity: 0.5;
 }
 
 .header-example__burger {
@@ -930,6 +926,92 @@ button,
   -moz-column-gap: 34px;
   column-gap: 34px;
   row-gap: 15px;
+}
+
+.navigation__link {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #f9fbfd;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.navigation__link.focus-visible:focus {
+  opacity: 0.7;
+}
+
+.footer {
+  background-color: #011c40;
+}
+
+.footer__container {
+  padding: 50px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 1fr auto;
+  grid-template-columns: 70px 1fr auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__navigation {
+  margin: 0;
+}
+
+.footer__social-list {
+  max-width: 150px;
+  margin: 0;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+.social {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+
+.social__item {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.social__link.focus-visible:focus {
+  opacity: 0.7;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
 }
 
 .custom-input,
@@ -1532,10 +1614,6 @@ button,
     padding: 28px 0;
   }
 
-  .header-example__link {
-    font-size: 14px;
-  }
-
   .header-example_container {
     -ms-grid-columns: 45px auto;
     grid-template-columns: 45px auto;
@@ -1573,6 +1651,38 @@ button,
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
+  }
+
+  .navigation__link {
+    font-size: 14px;
+  }
+
+  .navigation__link--footer {
+    font-size: 12px;
+  }
+
+  .footer__container {
+    -ms-grid-columns: 38px 1fr auto;
+    grid-template-columns: 38px 1fr auto;
+    gap: 25px;
+  }
+
+  .social {
+    gap: 22px;
+  }
+
+  .social {
+    gap: 19px;
+  }
+
+  .social__item {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social__icon {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1660,9 +1770,6 @@ button,
   }
 
   .header-example__link {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
     color: #011c40;
   }
 
@@ -1716,6 +1823,40 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     row-gap: 12px;
+  }
+
+  .navigation--footer {
+    row-gap: 0;
+  }
+
+  .navigation__item {
+    width: 100%;
+  }
+
+  .navigation__link {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .navigation__link--footer {
+    font-size: 12px;
+    padding-left: 0;
+  }
+
+  .footer__container {
+    padding: 40px 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .footer__social-list {
+    -ms-grid-column-align: start;
+    justify-self: start;
   }
 }
 
@@ -1799,12 +1940,20 @@ button,
     opacity: 0.8;
   }
 
-  .header-example__link:hover:not(.focus-visible) {
+  .logo:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 
   .header-example__burger:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .navigation__link:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+
+  .social__link:hover:not(.focus-visible) {
+    opacity: 0.7;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
