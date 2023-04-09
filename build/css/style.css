@@ -648,9 +648,11 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 14px 20px;
+  font-weight: 600;
   font-family: inherit;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 100%;
+  text-align: center;
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
@@ -854,7 +856,7 @@ button,
   transform: rotate(-45deg);
 }
 
-.header-example_container {
+.header-example__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 70px auto;
@@ -1046,6 +1048,136 @@ button,
   margin: 0 0 16px;
   font-size: 14px;
   line-height: 140%;
+}
+
+.cruises__container {
+  padding: 95px 15px 120px;
+}
+
+.cruises h2 {
+  margin: 0 0 57px 0;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.cruise-card {
+  position: relative;
+  padding: 30px 25px 34px;
+  min-height: 386px;
+  background-color: #011c40;
+  color: #f9fbfd;
+}
+
+.cruise-card__content {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.cruise-card:hover .cruise-card__content,
+.cruise-card:focus .cruise-card__content,
+.cruise-card:focus-within .cruise-card__content {
+  opacity: 1;
+  z-index: 1;
+}
+
+.cruise-card__description {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cruise-card h3 {
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cruise-card dl {
+  margin: 0 0 6px 0;
+}
+
+.cruise-card dt {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.cruise-card dd {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+}
+
+.cruise-card__button {
+  display: block;
+  width: 100%;
+}
+
+.cruise-card__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.cruise-card__photo h3 {
+  position: absolute;
+  left: 30px;
+  bottom: 23px;
+  margin: 0;
+  color: #f9fbfd;
+}
+
+.cruise-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.cruise-card:hover .cruise-card__photo,
+.cruise-card:focus .cruise-card__photo,
+.cruise-card:focus-within .cruise-card__photo {
+  opacity: 0;
+  z-index: -1;
+}
+
+.cruise-card:hover .cruise-card__button,
+.cruise-card:focus .cruise-card__button,
+.cruise-card:focus-within .cruise-card__button {
+  position: relative;
+  z-index: 2;
 }
 
 .footer {
@@ -1738,7 +1870,7 @@ button,
     padding: 28px 0;
   }
 
-  .header-example_container {
+  .header-example__container {
     -ms-grid-columns: 45px auto;
     grid-template-columns: 45px auto;
     -webkit-column-gap: 20px;
@@ -1851,6 +1983,36 @@ button,
   .advantages__item p {
     line-height: 144%;
     margin-bottom: 0;
+  }
+
+  .cruises__container {
+    padding: 97px 15px 100px;
+  }
+
+  .cruises h2 {
+    font-size: 26px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cruise-card {
+    padding: 30px 35px;
+  }
+
+  .cruise-card dl {
+    margin-bottom: 10px;
+  }
+
+  .cruise-card__button {
+    margin-bottom: 5px;
+  }
+
+  .cruise-card__photo h3 {
+    left: 35px;
+    bottom: 29px;
   }
 
   .footer__container {
@@ -2083,6 +2245,29 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .cruises__container {
+    padding: 61px 10px 65px;
+  }
+
+  .cruises h2 {
+    margin-bottom: 36px;
+    font-size: 24px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .cruise-card {
+    padding: 30px 25px;
+  }
+
+  .cruise-card__photo h3 {
+    left: 25px;
+    bottom: 19px;
   }
 
   .footer__container {

@@ -1,0 +1,121 @@
+.cruise-card {
+  position: relative;
+  padding: 30px 25px 34px;
+  min-height: 386px;
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 30px 35px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px;
+  }
+}
+
+.cruise-card__content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity $trans-default;
+}
+
+.cruise-card:hover .cruise-card__content,
+.cruise-card:focus .cruise-card__content,
+.cruise-card:focus-within .cruise-card__content {
+  opacity: 1;
+  z-index: 1;
+}
+
+.cruise-card__description {
+  flex-grow: 1;
+}
+
+.cruise-card h3 {
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cruise-card dl {
+  margin: 0 0 6px 0;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+}
+
+.cruise-card dt {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.cruise-card dd {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+}
+
+.cruise-card__button {
+  display: block;
+  width: 100%;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+}
+
+.cruise-card__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: opacity $trans-default;
+}
+
+.cruise-card__photo h3 {
+  position: absolute;
+  left: 30px;
+  bottom: 23px;
+  margin: 0;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    left: 35px;
+    bottom: 29px;
+  }
+
+  @include vp-767 {
+    left: 25px;
+    bottom: 19px;
+  }
+}
+
+.cruise-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cruise-card:hover .cruise-card__photo,
+.cruise-card:focus .cruise-card__photo,
+.cruise-card:focus-within .cruise-card__photo {
+  opacity: 0;
+  z-index: -1;
+}
+
+.cruise-card:hover .cruise-card__button,
+.cruise-card:focus .cruise-card__button,
+.cruise-card:focus-within .cruise-card__button {
+  position: relative;
+  z-index: 2;
+}
