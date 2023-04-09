@@ -1,0 +1,116 @@
+.booking-form {
+  width: 403px;
+  padding: 45px 50px 50px;
+  display: grid;
+  gap: 20px;
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+
+  @include vp-767 {
+    padding: 35px 30px 41px;
+    width: 100%;
+  }
+}
+
+.booking-form h3 {
+  margin: 0 0 6px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  @include vp-767 {
+    margin-bottom: 7px;
+    text-align: center;
+    line-height: 140%;
+  }
+}
+
+.booking-form input {
+  width: 100%;
+  height: 43px;
+  padding: 11px 16px;
+  font: inherit;
+  color: $color-tangaroa;
+  font-size: 14px;
+  background-color: $color-alice-blue;
+  border: none;
+  transition: background-color $trans-default;
+
+  &::placeholder {
+    font: inherit;
+    color: rgba(1, 28, 64, 0.7);
+  }
+
+  @include hover-focus {
+    background-color: rgba(249, 251, 253, 0.8);
+  }
+
+  @include active {
+    background-color: rgba(249, 251, 253, 0.9);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.booking-form__checkbox label {
+  display: grid;
+  grid-template-columns: 18px auto;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 130%;
+  cursor: pointer;
+
+  @include vp-767 {
+    max-width: 180px;
+    margin-top: -3px;
+    gap: 10px;
+  }
+}
+
+.booking-form input[type="checkbox"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.booking-form input[type="checkbox"] + span {
+  width: 18px;
+  height: 18px;
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.booking-form input[type="checkbox"]:checked + span {
+  background-image: url("./../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.booking-form__checkbox label:hover input[type="checkbox"] + span,
+.booking-form__checkbox label:focus-within input[type="checkbox"] + span {
+  background-color: rgba(249, 251, 253, 0.9);
+}
+
+.booking-form__button {
+  margin-top: 10px;
+
+  @include vp-767 {
+    margin-top: 7px;
+  }
+}
