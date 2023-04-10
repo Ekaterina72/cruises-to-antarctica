@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   opacity: 0;
-  transition: opacity $trans-default;
+  transition: opacity $trans-600;
 }
 
 .cruise-card:hover .cruise-card__content,
@@ -79,7 +79,7 @@
   right: 0;
   bottom: 0;
   opacity: 1;
-  transition: opacity $trans-default;
+  transition: opacity $trans-600;
 }
 
 .cruise-card__photo h3 {

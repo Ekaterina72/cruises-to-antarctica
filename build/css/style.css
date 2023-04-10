@@ -859,6 +859,10 @@ button,
   transform: rotate(-45deg);
 }
 
+.header-example__close-lay {
+  position: absolute;
+}
+
 .header-example__container {
   display: -ms-grid;
   display: grid;
@@ -1094,9 +1098,9 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .cruise-card:hover .cruise-card__content,
@@ -1149,9 +1153,9 @@ button,
   right: 0;
   bottom: 0;
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .cruise-card__photo h3 {
@@ -1344,6 +1348,100 @@ button,
 
 .booking-form__button {
   margin-top: 10px;
+}
+
+.contacts__container {
+  padding: 120px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 38px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contacts__map {
+  max-width: 560px;
+  height: 306px;
+}
+
+.contacts__map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.contacts__info {
+  max-width: 500px;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+.contacts h3 {
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  gap: 13px;
+}
+
+.contacts__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 18px auto;
+  grid-template-columns: 18px auto;
+  gap: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contacts__item::before {
+  content: "";
+  width: 100%;
+  height: 30px;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  line-height: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts__item--address::before {
+  background-image: url("./../img/svg/location.svg");
+}
+
+.contacts__item--tel::before {
+  background-image: url("./../img/svg/phone.svg");
+}
+
+.contacts address {
+  font-style: normal;
+}
+
+.contacts a {
+  -ms-grid-column-align: start;
+  justify-self: start;
+  color: inherit;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.contacts a.focus-visible:focus {
+  opacity: 0.7;
 }
 
 .footer {
@@ -2240,6 +2338,32 @@ button,
     text-align: center;
   }
 
+  .contacts__container {
+    padding: 100px 0;
+    gap: 30px;
+  }
+
+  .contacts__map {
+    max-width: 324px;
+    height: 335px;
+  }
+
+  .contacts__info {
+    max-width: auto;
+  }
+
+  .contacts h3 {
+    margin-bottom: 27px;
+  }
+
+  .contacts__list {
+    gap: 16px;
+  }
+
+  .contacts address {
+    max-width: 263px;
+  }
+
   .footer__container {
     -ms-grid-columns: 38px 1fr auto;
     grid-template-columns: 38px 1fr auto;
@@ -2382,6 +2506,15 @@ button,
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+
+  .is-open .header-example__close-lay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
   }
 
   .intro {
@@ -2557,6 +2690,31 @@ button,
     margin-top: 7px;
   }
 
+  .contacts__container {
+    padding: 58px 0 65px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .contacts__map {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    width: 100%;
+    max-height: 316px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .contacts__info {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
   .footer__container {
     padding: 40px 0;
     -ms-grid-columns: 1fr;
@@ -2687,6 +2845,10 @@ button,
 
   .booking-form input:hover:not(.focus-visible) {
     background-color: rgba(249, 251, 253, 0.8);
+  }
+
+  .contacts a:hover:not(.focus-visible) {
+    opacity: 0.7;
   }
 
   .social__link:hover:not(.focus-visible) {

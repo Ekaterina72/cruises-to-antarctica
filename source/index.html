@@ -46,6 +46,7 @@
               </li>
             </ul>
           </nav>
+          <div class="header-example__close-lay" data-close-menu></div>
           <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню"
             aria-pressed="false" data-burger>
             <span class="header-example__burger-open"></span>
@@ -415,6 +416,40 @@
                 </div>
                 <button class="btn booking-form__button" type="submit">Оставить заявку</button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="#contacts">
+        <div class="container">
+          <div class="contacts__container">
+            <h2 class="visually-hidden">Контакты</h2>
+            <div class="contacts__map">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/backgrounds/map-bg-mobile.webp 1x, img/backgrounds/map-bg-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/backgrounds/map-bg-tablet.webp 1x, img/backgrounds/map-bg-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/backgrounds/map-bg.webp 1x, img/backgrounds/map-bg@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/backgrounds/map-bg-mobile.jpg 1x, img/backgrounds/map-bg-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/backgrounds/map-bg-tablet.jpg 1x, img/backgrounds/map-bg-tablet@2x.jpg 2x">
+                <img src="img/backgrounds/map-bg.jpg" srcset="img/backgrounds/map-bg@2x.jpg 2x"
+                  alt="г. Санкт Петербург, ул. Большая Конюшенная, 19/8." width="560" height="306">
+              </picture>
+            </div>
+            <div class="contacts__info">
+              <h3>У&nbsp;вас ещё остались вопросы или сомнения?
+                Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</h3>
+              <ul class="contacts__list">
+                <li class="contacts__item contacts__item--address">
+                  <address>г. Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</address>
+                </li>
+                <li class="contacts__item contacts__item--tel">
+                  <a href="tel:88002000000">8-800-200-00-00</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
