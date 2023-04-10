@@ -424,20 +424,7 @@
         <div class="container">
           <div class="contacts__container">
             <h2 class="visually-hidden">Контакты</h2>
-            <div class="contacts__map">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/backgrounds/map-bg-mobile.webp 1x, img/backgrounds/map-bg-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/backgrounds/map-bg-tablet.webp 1x, img/backgrounds/map-bg-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/backgrounds/map-bg.webp 1x, img/backgrounds/map-bg@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/backgrounds/map-bg-mobile.jpg 1x, img/backgrounds/map-bg-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/backgrounds/map-bg-tablet.jpg 1x, img/backgrounds/map-bg-tablet@2x.jpg 2x">
-                <img src="img/backgrounds/map-bg.jpg" srcset="img/backgrounds/map-bg@2x.jpg 2x"
-                  alt="г. Санкт Петербург, ул. Большая Конюшенная, 19/8." width="560" height="306">
-              </picture>
+            <div class="contacts__map" id="map">
             </div>
             <div class="contacts__info">
               <h3>У&nbsp;вас ещё остались вопросы или сомнения?
@@ -503,6 +490,7 @@
     </footer>
   </div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=7d566289-5540-4e2f-911d-b60b8a1f68a5&lang=ru_RU"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
