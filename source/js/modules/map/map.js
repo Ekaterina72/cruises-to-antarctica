@@ -1,7 +1,8 @@
-ymaps.ready(init);
+const ymaps = window.ymaps;
+const myMap = document.querySelector('#map');
 
-function init() {
-  let map = new ymaps.Map('map', {
+const mapInit = () => {
+  const map = new ymaps.Map(myMap, {
     center: [59.93863106417265, 30.323036499999905],
     zoom: 16,
   });
@@ -13,4 +14,8 @@ function init() {
   });
 
   map.geoObjects.add(myPlacemark);
+};
+
+if (myMap) {
+  ymaps.ready(mapInit);
 }
