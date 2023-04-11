@@ -1241,6 +1241,8 @@ button,
   gap: 20px;
   background-color: #011c40;
   color: #f9fbfd;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .booking-form h3 {
@@ -2592,7 +2594,7 @@ button,
   }
 
   .navigation--footer {
-    row-gap: 0;
+    row-gap: 6px;
   }
 
   .navigation__item {
@@ -2600,8 +2602,7 @@ button,
   }
 
   .navigation__link {
-    width: 100%;
-    padding: 10px;
+    padding: 7px 5px;
     font-size: 18px;
   }
 
@@ -2760,7 +2761,7 @@ button,
     padding: 40px 0;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 22px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
