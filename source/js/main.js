@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
 import {StickyHeader} from './modules/header/sticky-header';
-import './modules/map/map';
+import {startMap} from './modules/map/map';
 
 // ---------------------------------
 
@@ -26,8 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    startMap();
   });
 });
+
 
 // ---------------------------------
 
