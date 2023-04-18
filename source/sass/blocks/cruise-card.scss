@@ -31,7 +31,7 @@
 }
 
 .cruise-card__description {
-  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .cruise-card h3 {

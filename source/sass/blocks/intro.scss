@@ -25,6 +25,7 @@
 
   @include vp-1023 {
     min-height: 638px;
+    filter: none;
     background-image: url("./../img/backgrounds/main-bg-tablet.jpg");
 
     @supports (background-image: url("./../img/backgrounds/main-bg-tablet.webp")) {

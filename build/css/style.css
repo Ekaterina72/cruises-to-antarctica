@@ -1111,9 +1111,7 @@ button,
 }
 
 .cruise-card__description {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .cruise-card h3 {
@@ -1369,7 +1367,7 @@ button,
   height: 306px;
   background-color: #dbe7f5;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 }
 
@@ -2183,6 +2181,8 @@ button,
 
   .intro {
     min-height: 638px;
+    -webkit-filter: none;
+    filter: none;
     background-image: url("./../img/backgrounds/main-bg-tablet.jpg");
   }
 
@@ -2550,6 +2550,7 @@ button,
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(0, 43, 102, 0.5);
     z-index: 2;
   }
 
@@ -2602,13 +2603,16 @@ button,
   }
 
   .navigation__link {
-    padding: 7px 5px;
+    padding: 10px 10px;
     font-size: 18px;
+    color: #011c40;
   }
 
   .navigation__link--footer {
+    padding: 7px 5px;
     font-size: 12px;
     padding-left: 0;
+    color: #f9fbfd;
   }
 
   .trips__container {
@@ -2738,6 +2742,7 @@ button,
   .contacts__map {
     -ms-grid-column-align: center;
     justify-self: center;
+    max-width: none;
     width: 100%;
     max-height: 316px;
     -webkit-box-ordinal-group: 2;
