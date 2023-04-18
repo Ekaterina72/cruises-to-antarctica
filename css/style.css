@@ -1113,7 +1113,8 @@ button,
 }
 
 .cruise-card__description {
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .cruise-card h3 {
