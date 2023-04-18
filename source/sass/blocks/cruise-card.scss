@@ -1,9 +1,25 @@
 .cruise-card {
   position: relative;
-  padding: 30px 25px 34px;
   min-height: 386px;
   background-color: $color-tangaroa;
   color: $color-alice-blue;
+
+  @include vp-767 {
+    max-width: none;
+  }
+}
+
+.cruise-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 25px 34px;
+  display: grid;
+  grid-template-rows: min-content auto;
+  opacity: 0;
+  transition: opacity $trans-600;
 
   @include vp-1023 {
     padding: 30px 35px;
@@ -12,15 +28,6 @@
   @include vp-767 {
     padding: 30px 25px;
   }
-}
-
-.cruise-card__content {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity $trans-600;
 }
 
 .cruise-card:hover .cruise-card__content,
@@ -66,6 +73,7 @@
 .cruise-card__button {
   display: block;
   width: 100%;
+  align-self: end;
 
   @include vp-1023 {
     margin-bottom: 5px;
@@ -73,11 +81,7 @@
 }
 
 .cruise-card__photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
   opacity: 1;
   transition: opacity $trans-600;
 }
