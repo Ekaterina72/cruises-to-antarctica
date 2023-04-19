@@ -86,7 +86,6 @@
   &__item {
     @include vp-767 {
       width: 100%;
-      opacity: 0;
       transition: all ease-out 0.15s;
       transform: translateX(15px);
     }
